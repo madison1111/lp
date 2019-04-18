@@ -1,0 +1,25 @@
+#####################################
+###   Arbitrage strategy config   ###
+#####################################
+
+# The following configuations are only required for the
+# arbitrage strategy
+
+# Exchange and token parameters
+primary_market: ddex
+secondary_market: radar_relay
+primary_market_symbol: WETH-DAI
+secondary_market_symbol: WETH-DAI
+
+# Minimum profitability target required to place an order
+# Expressed in decimals: 0.01 = 1% target profit
+min_profitability: 0.01
+
+trade_size_override: 0.0
+top_depth_tolerance:
+- - ^.+(USDT|USDC|USDS|DAI|PAX|TUSD)$
+  - 1000
+- - ^.+ETH$
+  - 10
+- - ^.+BTC$
+  - 0.5

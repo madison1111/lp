@@ -1,0 +1,50 @@
+########################################################
+###   Cross exchange market making strategy config   ###
+########################################################
+
+# The following configuations are only required for the
+# cross exchange market making strategy
+
+# Exchange and token parameters
+maker_market: ddex
+taker_market: radar_relay
+maker_market_symbol: WETH-DAI
+taker_market_symbol: WETH-DAI
+
+# Minimum profitability target required to place an order
+# Expressed in decimals: 0.01 = 1% target profit
+min_profitability: 0.01
+
+# Maximum order size in terms of quote currency
+trade_size_override: 0.0
+
+# Maximum aggregate amount of orders in quote currency
+# that are allowed at a better price than Hummingbot's
+# order before Hummingbot adjusts its order and pricing
+top_depth_tolerance:
+
+- -
+    ^.+(USDT|USDC|USDS|DAI|PAX|TUSD)$
+  - 1000
+- - ^.+ETH$
+  - 10
+- - ^.+BTC$
+  - 0.5
+# Have Hummingbot actively adjust/cancel orders if necessary.
+# If set to true, outstanding orders are adjusted if
+# profitability falls below min_profitability.
+# If set to false, outstanding orders are adjusted if
+# profitability falls below cancel_order_threshold.
+active_order_canceling: true
+
+# If active_order_canceling = false, this is the profitability/
+# loss threshold at which to cancel the order.
+# Expressed in decimals: 0.01 = 1% target profit
+cancel_order_threshold: -1.0
+
+# An amount in seconds, which is the minimum duration for any
+# placed limit orders. Default value = 130 seconds.
+limit_order_min_expiration: 130.0
+
+# For more detailed information, see:
+# https://docs.hummingbot.io/configuration/#hummingbot-configuration-variables

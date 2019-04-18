@@ -1,0 +1,70 @@
+2019-04-16 14:46:00,060 - lp.cli.utils.exchange_rate_conversion - ERROR - Error initiating config for exchange rate conversion.
+2019-04-16 14:46:02,411 - wags.wallet.web3_wallet_backend - INFO - Approving spender for drawing Wrapped Ether from wallet address 0x6B63487F3A04a95A03E464Ff267AD433f3e05700.
+2019-04-16 14:46:02,610 - wags.wallet.web3_wallet_backend - INFO - Approving spender for drawing Dai Stablecoin v1.0 from wallet address 0x6B63487F3A04a95A03E464Ff267AD433f3e05700.
+2019-04-16 14:46:02,836 - wags.wallet.web3_wallet_backend - INFO - Approving spender for drawing Wrapped Ether from wallet address 0x6B63487F3A04a95A03E464Ff267AD433f3e05700.
+2019-04-16 14:46:02,975 - wags.wallet.web3_wallet_backend - INFO - Approving spender for drawing Dai Stablecoin v1.0 from wallet address 0x6B63487F3A04a95A03E464Ff267AD433f3e05700.
+2019-04-16 14:46:04,224 - wags.wallet.web3_wallet_backend - ERROR - Error sending transaction 0xe716a05eae5a55f09581606380ea2622f7b4da8d34f6ea02caac0c970a923e93.
+Traceback (most recent call last):
+  File "/Users/madisonpiercy/Downloads/lp/wags/wallet/web3_wallet_backend.py", line 275, in outgoing_eth_transactions_loop
+    signed_transaction.rawTransaction)
+  File "/anaconda3/envs/lp/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/anaconda3/envs/lp/lib/python3.6/site-packages/web3/eth.py", line 274, in sendRawTransaction
+    [raw_transaction],
+  File "/anaconda3/envs/lp/lib/python3.6/site-packages/web3/manager.py", line 112, in request_blocking
+    raise ValueError(response["error"])
+ValueError: {'code': -32000, 'message': 'insufficient funds for gas * price + value'}
+2019-04-16 14:46:04,357 - wags.wallet.web3_wallet_backend - ERROR - Error sending transaction 0x1da66866d2815609ccb140b83371664cc0db4e6e6cdfa6d5e1aa19db9d5aa95a.
+Traceback (most recent call last):
+  File "/Users/madisonpiercy/Downloads/lp/wags/wallet/web3_wallet_backend.py", line 275, in outgoing_eth_transactions_loop
+    signed_transaction.rawTransaction)
+  File "/anaconda3/envs/lp/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/anaconda3/envs/lp/lib/python3.6/site-packages/web3/eth.py", line 274, in sendRawTransaction
+    [raw_transaction],
+  File "/anaconda3/envs/lp/lib/python3.6/site-packages/web3/manager.py", line 112, in request_blocking
+    raise ValueError(response["error"])
+ValueError: {'code': -32000, 'message': 'insufficient funds for gas * price + value'}
+2019-04-16 14:46:04,438 - wags.wallet.web3_wallet_backend - ERROR - Error sending transaction 0x995e3b9c6e831bfb4d00c86c3d365caac7223ea976fe527174c63d0b8f827be1.
+Traceback (most recent call last):
+  File "/Users/madisonpiercy/Downloads/lp/wags/wallet/web3_wallet_backend.py", line 275, in outgoing_eth_transactions_loop
+    signed_transaction.rawTransaction)
+  File "/anaconda3/envs/lp/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/anaconda3/envs/lp/lib/python3.6/site-packages/web3/eth.py", line 274, in sendRawTransaction
+    [raw_transaction],
+  File "/anaconda3/envs/lp/lib/python3.6/site-packages/web3/manager.py", line 112, in request_blocking
+    raise ValueError(response["error"])
+ValueError: {'code': -32000, 'message': 'insufficient funds for gas * price + value'}
+2019-04-16 14:46:04,575 - wags.wallet.web3_wallet_backend - ERROR - Error sending transaction 0x3a055e217dd011ffa9983f08b6ccc2b88d81ee60949661655e2b532cbe8dcb6c.
+Traceback (most recent call last):
+  File "/Users/madisonpiercy/Downloads/lp/wags/wallet/web3_wallet_backend.py", line 275, in outgoing_eth_transactions_loop
+    signed_transaction.rawTransaction)
+  File "/anaconda3/envs/lp/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/anaconda3/envs/lp/lib/python3.6/site-packages/web3/eth.py", line 274, in sendRawTransaction
+    [raw_transaction],
+  File "/anaconda3/envs/lp/lib/python3.6/site-packages/web3/manager.py", line 112, in request_blocking
+    raise ValueError(response["error"])
+ValueError: {'code': -32000, 'message': 'insufficient funds for gas * price + value'}
+2019-04-16 14:49:12,367 - wags.wallet.web3_wallet_backend - INFO - Received 1.0 WETH at transaction 0x30f928a1a9d02011232bad34becceef9fccf31e2379f85efa6f6534675d666b3.
+2019-04-16 14:49:32,347 - wags.wallet.web3_wallet_backend - INFO - Received 100.00000000000001 DAI at transaction 0xf208afa85c4f9ce85bc08a1b419720f10cd255cd708fdb1548c17ce37e69fdf9.
+2019-04-16 14:51:48,245 - wags.wallet.web3_wallet_backend - INFO - Received 0.30000000000000004 ETH at transaction 0x2d5346778458feb5ffe7181f2e1ec8da3d2334317029591b4e1bae89a0874313.
+2019-04-16 14:53:27,286 - wags.watcher.contract_event_logs - ERROR - Error fetching logs from block with filters: '{'topics': ['0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef'], 'address': '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2', 'blockHash': '0xed0d1a91c46ab591deef86b7fc20660c21a5118312bec9b879f0f81da17dda1b'}'.
+2019-04-16 14:53:27,287 - wags.watcher.contract_event_logs - ERROR - Error fetching logs from block with filters: '{'topics': ['0xe1fffcc4923d04b559f4d29a8bfc6cda04eb5b0d3c460751c2402c5c5cc9109c'], 'address': '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2', 'blockHash': '0xed0d1a91c46ab591deef86b7fc20660c21a5118312bec9b879f0f81da17dda1b'}'.
+2019-04-16 14:53:27,310 - wags.watcher.contract_event_logs - ERROR - Error fetching logs from block with filters: '{'topics': ['0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef'], 'address': '0x89d24A6b4CcB1B6fAA2625fE562bDD9a23260359', 'blockHash': '0xed0d1a91c46ab591deef86b7fc20660c21a5118312bec9b879f0f81da17dda1b'}'.
+2019-04-16 14:54:32,582 - wags.watcher.contract_event_logs - ERROR - Error fetching logs from block with filters: '{'topics': ['0x7fcf532c15f0a6db0bd6d0e038bea71d30d808c7d98cb3bf7268a95bf5081b65'], 'address': '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2', 'blockHash': '0xed0d1a91c46ab591deef86b7fc20660c21a5118312bec9b879f0f81da17dda1b'}'.
+2019-04-16 14:54:32,596 - wags.watcher.contract_event_logs - ERROR - Error fetching logs from block with filters: '{'topics': ['0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925'], 'address': '0x89d24A6b4CcB1B6fAA2625fE562bDD9a23260359', 'blockHash': '0xed0d1a91c46ab591deef86b7fc20660c21a5118312bec9b879f0f81da17dda1b'}'.
+2019-04-16 14:54:34,158 - wags.watcher.contract_event_logs - ERROR - Error fetching logs from block with filters: '{'topics': ['0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925'], 'address': '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2', 'blockHash': '0xed0d1a91c46ab591deef86b7fc20660c21a5118312bec9b879f0f81da17dda1b'}'.
+2019-04-16 15:08:33,089 - wags.watcher.contract_event_logs - ERROR - Error fetching logs from block with filters: '{'topics': ['0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef'], 'address': '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2', 'blockHash': '0x4ce6a614748301d7ee9779108786abf2b525dff09ccbe0b033c4d5fb7e7f46ac'}'.
+2019-04-16 15:08:33,135 - wags.watcher.contract_event_logs - ERROR - Error fetching logs from block with filters: '{'topics': ['0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef'], 'address': '0x89d24A6b4CcB1B6fAA2625fE562bDD9a23260359', 'blockHash': '0x4ce6a614748301d7ee9779108786abf2b525dff09ccbe0b033c4d5fb7e7f46ac'}'.
+2019-04-16 15:08:33,856 - wags.watcher.contract_event_logs - ERROR - Error fetching logs from block with filters: '{'topics': ['0xe1fffcc4923d04b559f4d29a8bfc6cda04eb5b0d3c460751c2402c5c5cc9109c'], 'address': '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2', 'blockHash': '0x4ce6a614748301d7ee9779108786abf2b525dff09ccbe0b033c4d5fb7e7f46ac'}'.
+2019-04-16 15:09:39,189 - wags.watcher.contract_event_logs - ERROR - Error fetching logs from block with filters: '{'topics': ['0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925'], 'address': '0x89d24A6b4CcB1B6fAA2625fE562bDD9a23260359', 'blockHash': '0x4ce6a614748301d7ee9779108786abf2b525dff09ccbe0b033c4d5fb7e7f46ac'}'.
+2019-04-16 15:09:39,801 - wags.watcher.contract_event_logs - ERROR - Error fetching logs from block with filters: '{'topics': ['0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925'], 'address': '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2', 'blockHash': '0x4ce6a614748301d7ee9779108786abf2b525dff09ccbe0b033c4d5fb7e7f46ac'}'.
+2019-04-16 15:09:40,598 - wags.watcher.contract_event_logs - ERROR - Error fetching logs from block with filters: '{'topics': ['0x7fcf532c15f0a6db0bd6d0e038bea71d30d808c7d98cb3bf7268a95bf5081b65'], 'address': '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2', 'blockHash': '0x4ce6a614748301d7ee9779108786abf2b525dff09ccbe0b033c4d5fb7e7f46ac'}'.
+2019-04-16 15:10:50,291 - wags.watcher.contract_event_logs - ERROR - Error fetching logs from block with filters: '{'topics': ['0xe1fffcc4923d04b559f4d29a8bfc6cda04eb5b0d3c460751c2402c5c5cc9109c'], 'address': '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2', 'blockHash': '0x7ca82e2df4ce96009077bd930957f8cf4720d352afe77c4a4eeedadb447da859'}'.
+2019-04-16 15:10:50,342 - wags.watcher.contract_event_logs - ERROR - Error fetching logs from block with filters: '{'topics': ['0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef'], 'address': '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2', 'blockHash': '0x7ca82e2df4ce96009077bd930957f8cf4720d352afe77c4a4eeedadb447da859'}'.
+2019-04-16 15:10:51,041 - wags.watcher.contract_event_logs - ERROR - Error fetching logs from block with filters: '{'topics': ['0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef'], 'address': '0x89d24A6b4CcB1B6fAA2625fE562bDD9a23260359', 'blockHash': '0x7ca82e2df4ce96009077bd930957f8cf4720d352afe77c4a4eeedadb447da859'}'.
+2019-04-16 15:11:57,321 - wags.watcher.contract_event_logs - ERROR - Error fetching logs from block with filters: '{'topics': ['0x7fcf532c15f0a6db0bd6d0e038bea71d30d808c7d98cb3bf7268a95bf5081b65'], 'address': '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2', 'blockHash': '0x7ca82e2df4ce96009077bd930957f8cf4720d352afe77c4a4eeedadb447da859'}'.
+2019-04-16 15:11:58,228 - wags.watcher.contract_event_logs - ERROR - Error fetching logs from block with filters: '{'topics': ['0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925'], 'address': '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2', 'blockHash': '0x7ca82e2df4ce96009077bd930957f8cf4720d352afe77c4a4eeedadb447da859'}'.
+2019-04-16 15:11:58,957 - wags.watcher.contract_event_logs - ERROR - Error fetching logs from block with filters: '{'topics': ['0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925'], 'address': '0x89d24A6b4CcB1B6fAA2625fE562bDD9a23260359', 'blockHash': '0x7ca82e2df4ce96009077bd930957f8cf4720d352afe77c4a4eeedadb447da859'}'.

@@ -1,0 +1,30 @@
+2019-04-17 14:23:29,134 - lp.cli.utils.exchange_rate_conversion - ERROR - Error initiating config for exchange rate conversion.
+2019-04-17 14:23:31,093 - wags.wallet.web3_wallet_backend - INFO - Approval already exists for Wrapped Ether from wallet address 0x6B63487F3A04a95A03E464Ff267AD433f3e05700.
+2019-04-17 14:23:31,093 - wags.wallet.web3_wallet_backend - INFO - Approval already exists for Dai Stablecoin v1.0 from wallet address 0x6B63487F3A04a95A03E464Ff267AD433f3e05700.
+2019-04-17 14:23:31,219 - wags.wallet.web3_wallet_backend - INFO - Approval already exists for Wrapped Ether from wallet address 0x6B63487F3A04a95A03E464Ff267AD433f3e05700.
+2019-04-17 14:23:31,219 - wags.wallet.web3_wallet_backend - INFO - Approval already exists for Dai Stablecoin v1.0 from wallet address 0x6B63487F3A04a95A03E464Ff267AD433f3e05700.
+2019-04-17 14:25:23,004 - lp.strategy.arbitrage.arbitrage - INFO - Executing market order buy of WETH-DAI at RadarRelayMarket and sell of WETH-DAI at DDEXMarket with amount 0.1, and profitability 1.0023000704601115 [clock=2019-04-17 18:25:23+00:00]
+2019-04-17 14:25:23,043 - lp.strategy.arbitrage.arbitrage - INFO - RadarRelayMarket:WETH-DAI vs. DDEXMarket:WETH-DAI:
+  WETH-DAI bid/ask: 168.75001/170.35000000000002
+  WETH-DAI bid/ask: 170.9/171.07
+  Max profitability: 0.32286469034339405 %
+  Profitable: True
+  WETH/DAI balance: 0.7000000000000001/268.9794441012509
+  WETH/DAI balance: 0.7000000000000001/268.9794441012509
+
+  Pending market orders:
+                 market    symbol                        order_id  quantity            timestamp
+    0  RadarRelayMarket  WETH-DAI   buy-WETH-DAI-1555525523015572       0.1  2019-04-17 18:25:23
+    1        DDEXMarket  WETH-DAI  sell-WETH-DAI-1555525523016714       0.1  2019-04-17 18:25:23
+2019-04-17 14:25:23,507 - wags.event_reporter - EVENT_LOG - {"timestamp": 1555525523.0, "type": "OrderType.MARKET", "symbol": "WETH-DAI", "amount": "0.100000000", "price": "170.50782", "order_id": "buy-WETH-DAI-1555525523015572", "event_name": "BuyOrderCreatedEvent", "event_source": "RadarRelayMarket"}
+2019-04-17 14:25:25,778 - wags.event_reporter - EVENT_LOG - {"timestamp": 1555525525.0, "type": "OrderType.MARKET", "symbol": "WETH-DAI", "amount": "0.10", "price": "0.00", "order_id": "sell-WETH-DAI-1555525523016714", "event_name": "SellOrderCreatedEvent", "event_source": "DDEXMarket"}
+2019-04-17 14:25:25,778 - wags.market.ddex_market - INFO - Created OrderType.MARKET sell order 0x96a304784ea1e02df23cfd93cd933a045fd40ce21a2cb512addac37fd8cadeea for 0.10 WETH-DAI.
+2019-04-17 14:25:41,067 - wags.market.ddex_market - INFO - The market sell order sell-WETH-DAI-1555525523016714 has completed according to order status API.
+2019-04-17 14:25:41,069 - lp.strategy.arbitrage.arbitrage - INFO - Market order completed on DDEXMarket: sell-WETH-DAI-1555525523016714 [clock=2019-04-17 18:25:40+00:00]
+2019-04-17 14:25:41,069 - wags.event_reporter - EVENT_LOG - {"timestamp": 1555525540.0, "order_id": "sell-WETH-DAI-1555525523016714", "base_asset": "WETH", "quote_asset": "DAI", "fee_asset": "DAI", "base_asset_amount": 0.0, "quote_asset_amount": 0.0, "fee_amount": 0.257887795124163, "event_name": "SellOrderCompletedEvent", "event_source": "DDEXMarket"}
+2019-04-17 14:25:55,215 - wags.market.ddex_market - INFO - Filled 0.1 out of 0.10 of the market sell order sell-WETH-DAI-1555525523016714.
+2019-04-17 14:25:55,216 - wags.event_reporter - EVENT_LOG - {"timestamp": 1555525555.0, "order_id": "sell-WETH-DAI-1555525523016714", "symbol": "WETH-DAI", "trade_type": "TradeType.SELL", "order_type": "OrderType.MARKET", "price": 166.13346204875836, "amount": 0.1, "event_name": "OrderFilledEvent", "event_source": "DDEXMarket"}
+2019-04-17 14:28:30,071 - wags.market.radar_relay_market - ERROR - The market order buy-WETH-DAI-1555525523015572has failed according to transaction hash 0x5936b9bde5bdb7d28222a91e9342c3613e98f1be89f8ec4b381c543ba93a80ce.
+2019-04-17 14:28:30,073 - lp.strategy.arbitrage.arbitrage - INFO - Market order failed on RadarRelayMarket: buy-WETH-DAI-1555525523015572 [clock=2019-04-17 18:28:30+00:00]
+2019-04-17 14:28:30,073 - wags.event_reporter - EVENT_LOG - {"timestamp": 1555525710.0, "order_id": "buy-WETH-DAI-1555525523015572", "event_name": "MarketTransactionFailureEvent", "event_source": "RadarRelayMarket"}
+2019-04-17 14:28:30,199 - wags.wallet.web3_wallet_backend - WARNING - The transaction 0x5936b9bde5bdb7d28222a91e9342c3613e98f1be89f8ec4b381c543ba93a80ce has failed.

@@ -1,0 +1,55 @@
+#################################
+###   Global configurations   ###
+#################################
+
+# Exchange configs
+# Only fill out the credentials for the markets you are trading on
+binance_api_key: None
+binance_api_secret: None
+coinbase_pro_api_key: None
+coinbase_pro_secret_key: None
+coinbase_pro_passphrase: None
+
+# Ethereum wallet address: required for trading on a DEX
+wallet: '0x6B63487F3A04a95A03E464Ff267AD433f3e05700'
+ethereum_rpc_url: https://mainnet.infura.io/v3/02767239ee5a4b59b7335b42c5f80c46
+
+# Advanced configs: Do NOT touch unless you understand what you are changing
+client_id: 66655e731f67b4409b6352fe9f42307e8db0b3b4
+log_level: INFO
+debug_console: false
+strategy_report_interval: 900.0
+reporting_aggregation_interval: 60.0
+reporting_log_interval: 60.0
+logger_override_whitelist:
+- hummingbot.strategy.arbitrage
+- hummingbot.strategy.cross_exchange_market_making
+- wings.web3_wallet
+- wings.web3_wallet_backend
+- wings.ddex_market
+- wings.binance_market
+- conf
+key_file_path: conf/
+log_file_path: logs/
+on_chain_cancel_on_exit: false
+
+exchange_rate_conversion:
+- - DAI
+  - 1.0
+- - USDT
+  - 1.0
+- - USDC
+  - 1.0
+- - TUSD
+  - 1.0
+exchange_rate_fetcher:
+- - DAI
+  - COINCAP_API
+- - USDT
+  - COINCAP_API
+- - USDC
+  - COINCAP_API
+- - TUSD
+  - COINCAP_API
+- - ETH
+  - COINCAP_API

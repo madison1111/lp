@@ -1,0 +1,214 @@
+2019-04-17 14:57:48,562 - lp.cli.utils.exchange_rate_conversion - ERROR - Error initiating config for exchange rate conversion.
+2019-04-17 14:57:50,208 - wags.wallet.web3_wallet_backend - INFO - Approval already exists for Wrapped Ether from wallet address 0x6B63487F3A04a95A03E464Ff267AD433f3e05700.
+2019-04-17 14:57:50,208 - wags.wallet.web3_wallet_backend - INFO - Approval already exists for Dai Stablecoin v1.0 from wallet address 0x6B63487F3A04a95A03E464Ff267AD433f3e05700.
+2019-04-17 14:57:50,304 - wags.wallet.web3_wallet_backend - INFO - Approval already exists for Wrapped Ether from wallet address 0x6B63487F3A04a95A03E464Ff267AD433f3e05700.
+2019-04-17 14:57:50,304 - wags.wallet.web3_wallet_backend - INFO - Approval already exists for Dai Stablecoin v1.0 from wallet address 0x6B63487F3A04a95A03E464Ff267AD433f3e05700.
+2019-04-17 15:00:38,867 - wags.watcher.contract_event_logs - ERROR - Error fetching logs from block with filters: '{'topics': ['0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef'], 'address': '0x89d24A6b4CcB1B6fAA2625fE562bDD9a23260359', 'blockHash': '0xd170893533f7b82bb4f9710c314fcc583d180746ae6c102969d0a50ef3511d70'}'.
+2019-04-17 15:00:38,953 - wags.watcher.contract_event_logs - ERROR - Error fetching logs from block with filters: '{'topics': ['0xe1fffcc4923d04b559f4d29a8bfc6cda04eb5b0d3c460751c2402c5c5cc9109c'], 'address': '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2', 'blockHash': '0xd170893533f7b82bb4f9710c314fcc583d180746ae6c102969d0a50ef3511d70'}'.
+2019-04-17 15:00:39,970 - wags.watcher.contract_event_logs - ERROR - Error fetching logs from block with filters: '{'topics': ['0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef'], 'address': '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2', 'blockHash': '0xd170893533f7b82bb4f9710c314fcc583d180746ae6c102969d0a50ef3511d70'}'.
+2019-04-17 15:01:14,004 - lp.strategy.arbitrage.arbitrage - INFO - Executing market order buy of WETH-DAI at RadarRelayMarket and sell of WETH-DAI at DDEXMarket with amount 0.3, and profitability 1.0032379349370457 [clock=2019-04-17 19:01:14+00:00]
+2019-04-17 15:01:14,030 - lp.strategy.arbitrage.arbitrage - INFO - DDEXMarket:WETH-DAI vs. RadarRelayMarket:WETH-DAI:
+  WETH-DAI bid/ask: 170.91/172.39
+  WETH-DAI bid/ask: 169.20062/170.35000000000002
+  Max profitability: 0.32873495744054626 %
+  Profitable: True
+  WETH/DAI balance: 0.30000000000000004/335.5953399207543
+  WETH/DAI balance: 0.30000000000000004/335.5953399207543
+
+  Pending market orders:
+                 market    symbol                        order_id  quantity            timestamp
+    0  RadarRelayMarket  WETH-DAI   buy-WETH-DAI-1555527674013908       0.3  2019-04-17 19:01:14
+    1        DDEXMarket  WETH-DAI  sell-WETH-DAI-1555527674014984       0.3  2019-04-17 19:01:14
+2019-04-17 15:01:14,533 - wags.event_reporter - EVENT_LOG - {"timestamp": 1555527674.0, "type": "OrderType.MARKET", "symbol": "WETH-DAI", "amount": "0.29999999", "price": "170.35426", "order_id": "buy-WETH-DAI-1555527674013908", "event_name": "BuyOrderCreatedEvent", "event_source": "RadarRelayMarket"} 
+2019-04-17 15:01:15,083 - wags.event_reporter - EVENT_LOG - {"timestamp": 1555527675.0, "type": "OrderType.MARKET", "symbol": "WETH-DAI", "amount": "0.29", "price": "0.00", "order_id": "sell-WETH-DAI-1555527674014984", "event_name": "SellOrderCreatedEvent", "event_source": "DDEXMarket"}
+2019-04-17 15:01:15,084 - wags.market.ddex_market - INFO - Created OrderType.MARKET sell order 0xca9bf81aaf747ae86ce55b24a8dca435664657cec13684700b8ea5e9399ee0f6 for 0.29 WETH-DAI.
+2019-04-17 15:01:30,216 - wags.market.ddex_market - INFO - The market sell order sell-WETH-DAI-1555527674014984 has completed according to order status API.
+2019-04-17 15:01:30,217 - lp.strategy.arbitrage.arbitrage - INFO - Market order completed on DDEXMarket: sell-WETH-DAI-1555527674014984 [clock=2019-04-17 19:01:30+00:00]
+2019-04-17 15:01:30,217 - wags.event_reporter - EVENT_LOG - {"timestamp": 1555527690.0, "order_id": "sell-WETH-DAI-1555527674014984", "base_asset": "WETH", "quote_asset": "DAI", "fee_asset": "DAI", "base_asset_amount": 0.0, "quote_asset_amount": 0.0, "fee_amount": 0.2563508563535278, "event_name": "SellOrderCompletedEvent", "event_source": "DDEXMarket"}
+2019-04-17 15:01:34,713 - wags.watcher.contract_event_logs - ERROR - Error fetching logs from block with filters: '{'topics': ['0x7fcf532c15f0a6db0bd6d0e038bea71d30d808c7d98cb3bf7268a95bf5081b65'], 'address': '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2', 'blockHash': '0xd170893533f7b82bb4f9710c314fcc583d180746ae6c102969d0a50ef3511d70'}'.
+2019-04-17 15:01:35,806 - wags.watcher.contract_event_logs - ERROR - Error fetching logs from block with filters: '{'topics': ['0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925'], 'address': '0x89d24A6b4CcB1B6fAA2625fE562bDD9a23260359', 'blockHash': '0xd170893533f7b82bb4f9710c314fcc583d180746ae6c102969d0a50ef3511d70'}'.
+2019-04-17 15:01:36,652 - wags.watcher.contract_event_logs - ERROR - Error fetching logs from block with filters: '{'topics': ['0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925'], 'address': '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2', 'blockHash': '0xd170893533f7b82bb4f9710c314fcc583d180746ae6c102969d0a50ef3511d70'}'.
+2019-04-17 15:01:45,235 - wags.market.ddex_market - INFO - Filled 0.29 out of 0.29 of the market sell order sell-WETH-DAI-1555527674014984.
+2019-04-17 15:01:45,236 - wags.event_reporter - EVENT_LOG - {"timestamp": 1555527705.0, "order_id": "sell-WETH-DAI-1555527674014984", "symbol": "WETH-DAI", "trade_type": "TradeType.SELL", "order_type": "OrderType.MARKET", "price": 169.5133015298154, "amount": 0.29, "event_name": "OrderFilledEvent", "event_source": "DDEXMarket"}
+2019-04-17 15:01:45,333 - wags.wallet.web3_wallet_backend - INFO - Received 0.05 WETH at transaction 0xe1d368f633c10e9c5b9d772db109a5b207b40f4648fb1e593031982dfa3704fe.
+2019-04-17 15:01:50,051 - wags.event_reporter - EVENT_LOG - {"timestamp": 1555527710.0, "order_id": "buy-WETH-DAI-1555527674013908", "symbol": "WETH-DAI", "trade_type": "TradeType.BUY", "order_type": "OrderType.MARKET", "price": "170.35426", "amount": "0.29999999", "event_name": "OrderFilledEvent", "event_source": "RadarRelayMarket"}
+2019-04-17 15:01:50,051 - wags.market.radar_relay_market - INFO - The market buy order buy-WETH-DAI-1555527674013908 has completed according to transaction hash 0xe1d368f633c10e9c5b9d772db109a5b207b40f4648fb1e593031982dfa3704fe.
+2019-04-17 15:01:50,051 - lp.strategy.arbitrage.arbitrage - INFO - Market order completed on RadarRelayMarket: buy-WETH-DAI-1555527674013908 [clock=2019-04-17 19:01:50+00:00]
+2019-04-17 15:01:50,052 - wags.event_reporter - EVENT_LOG - {"timestamp": 1555527710.0, "order_id": "buy-WETH-DAI-1555527674013908", "base_asset": "WETH", "quote_asset": "DAI", "fee_asset": "DAI", "base_asset_amount": 0.29999999, "quote_asset_amount": 0.0, "fee_amount": 0.0, "event_name": "BuyOrderCompletedEvent", "event_source": "RadarRelayMarket"}
+2019-04-17 15:01:51,005 - lp.strategy.arbitrage.arbitrage - INFO - Executing market order buy of WETH-DAI at RadarRelayMarket and sell of WETH-DAI at DDEXMarket with amount 0.3, and profitability 1.002444259843907 [clock=2019-04-17 19:01:51+00:00]
+2019-04-17 15:01:51,027 - lp.strategy.arbitrage.arbitrage - INFO - DDEXMarket:WETH-DAI vs. RadarRelayMarket:WETH-DAI:
+  WETH-DAI bid/ask: 170.79/172.76
+  WETH-DAI bid/ask: 169.20062/170.35000000000002
+  Max profitability: 0.2582917522747197 %
+  Profitable: True
+  WETH/DAI balance: 0.30999999/333.6470665679861
+  WETH/DAI balance: 0.30999999/333.6470665679861
+
+  Pending market orders:
+                 market    symbol                        order_id  quantity            timestamp
+    0  RadarRelayMarket  WETH-DAI   buy-WETH-DAI-1555527711011463       0.3  2019-04-17 19:01:51
+    1        DDEXMarket  WETH-DAI  sell-WETH-DAI-1555527711011513       0.3  2019-04-17 19:01:51
+2019-04-17 15:01:51,552 - wags.event_reporter - EVENT_LOG - {"timestamp": 1555527711.0, "type": "OrderType.MARKET", "symbol": "WETH-DAI", "amount": "0.29999999", "price": "170.37557", "order_id": "buy-WETH-DAI-1555527711011463", "event_name": "BuyOrderCreatedEvent", "event_source": "RadarRelayMarket"}
+2019-04-17 15:01:51,766 - wags.event_reporter - EVENT_LOG - {"timestamp": 1555527711.0, "type": "OrderType.MARKET", "symbol": "WETH-DAI", "amount": "0.29", "price": "0.00", "order_id": "sell-WETH-DAI-1555527711011513", "event_name": "SellOrderCreatedEvent", "event_source": "DDEXMarket"}
+2019-04-17 15:01:51,766 - wags.market.ddex_market - INFO - Created OrderType.MARKET sell order 0x0f198c926945decc16ed4d62594bc77ecb9352d4d13cf3d97a7b84d2562af763 for 0.29 WETH-DAI.
+2019-04-17 15:02:00,806 - wags.market.ddex_market - INFO - The market sell order sell-WETH-DAI-1555527711011513 has completed according to order status API.
+2019-04-17 15:02:00,808 - lp.strategy.arbitrage.arbitrage - INFO - Market order completed on DDEXMarket: sell-WETH-DAI-1555527711011513 [clock=2019-04-17 19:02:00+00:00]
+2019-04-17 15:02:00,808 - wags.event_reporter - EVENT_LOG - {"timestamp": 1555527720.0, "order_id": "sell-WETH-DAI-1555527711011513", "base_asset": "WETH", "quote_asset": "DAI", "fee_asset": "DAI", "base_asset_amount": 0.0, "quote_asset_amount": 0.0, "fee_amount": 0.2563508563535278, "event_name": "SellOrderCompletedEvent", "event_source": "DDEXMarket"}
+2019-04-17 15:02:15,282 - wags.market.ddex_market - INFO - Filled 0.29 out of 0.29 of the market sell order sell-WETH-DAI-1555527711011513.
+2019-04-17 15:02:15,284 - wags.event_reporter - EVENT_LOG - {"timestamp": 1555527735.0, "order_id": "sell-WETH-DAI-1555527711011513", "symbol": "WETH-DAI", "trade_type": "TradeType.SELL", "order_type": "OrderType.MARKET", "price": 169.39366152981543, "amount": 0.29, "event_name": "OrderFilledEvent", "event_source": "DDEXMarket"}
+2019-04-17 15:02:16,286 - wags.wallet.web3_wallet_backend - INFO - Received 0.29999999 WETH at transaction 0xff245ebb5718c46b0b8923262e5c3353770185da2dc0b3ac6d51f58364157739.
+2019-04-17 15:02:20,033 - wags.event_reporter - EVENT_LOG - {"timestamp": 1555527740.0, "order_id": "buy-WETH-DAI-1555527711011463", "symbol": "WETH-DAI", "trade_type": "TradeType.BUY", "order_type": "OrderType.MARKET", "price": "170.37557", "amount": "0.29999999", "event_name": "OrderFilledEvent", "event_source": "RadarRelayMarket"}
+2019-04-17 15:02:20,033 - wags.market.radar_relay_market - INFO - The market buy order buy-WETH-DAI-1555527711011463 has completed according to transaction hash 0xff245ebb5718c46b0b8923262e5c3353770185da2dc0b3ac6d51f58364157739.
+2019-04-17 15:02:20,035 - lp.strategy.arbitrage.arbitrage - INFO - Market order completed on RadarRelayMarket: buy-WETH-DAI-1555527711011463 [clock=2019-04-17 19:02:20+00:00]
+2019-04-17 15:02:20,036 - wags.event_reporter - EVENT_LOG - {"timestamp": 1555527740.0, "order_id": "buy-WETH-DAI-1555527711011463", "base_asset": "WETH", "quote_asset": "DAI", "fee_asset": "DAI", "base_asset_amount": 0.29999999, "quote_asset_amount": 0.0, "fee_amount": 0.0, "event_name": "BuyOrderCompletedEvent", "event_source": "RadarRelayMarket"}
+2019-04-17 15:02:20,099 - lp.strategy.arbitrage.arbitrage - INFO - Executing market order buy of WETH-DAI at RadarRelayMarket and sell of WETH-DAI at DDEXMarket with amount 0.31, and profitability 1.002240111640693 [clock=2019-04-17 19:02:20+00:00]
+2019-04-17 15:02:20,272 - lp.strategy.arbitrage.arbitrage - INFO - DDEXMarket:WETH-DAI vs. RadarRelayMarket:WETH-DAI:
+  WETH-DAI bid/ask: 170.74/172.78
+  WETH-DAI bid/ask: 169.20062/170.35000000000002
+  Max profitability: 0.2289404167889586 %
+  Profitable: True
+  WETH/DAI balance: 0.31999998/331.6585591153882
+  WETH/DAI balance: 0.31999998/331.6585591153882
+
+  Pending market orders:
+                 market    symbol                        order_id  quantity            timestamp
+    0  RadarRelayMarket  WETH-DAI   buy-WETH-DAI-1555527740113498      0.31  2019-04-17 19:02:20
+    1        DDEXMarket  WETH-DAI  sell-WETH-DAI-1555527740113659      0.31  2019-04-17 19:02:20
+2019-04-17 15:02:20,813 - wags.event_reporter - EVENT_LOG - {"timestamp": 1555527740.0, "type": "OrderType.MARKET", "symbol": "WETH-DAI", "amount": "0.30999999", "price": "170.35853", "order_id": "buy-WETH-DAI-1555527740113498", "event_name": "BuyOrderCreatedEvent", "event_source": "RadarRelayMarket"}
+2019-04-17 15:02:21,199 - wags.event_reporter - EVENT_LOG - {"timestamp": 1555527741.0, "type": "OrderType.MARKET", "symbol": "WETH-DAI", "amount": "0.30", "price": "0.00", "order_id": "sell-WETH-DAI-1555527740113659", "event_name": "SellOrderCreatedEvent", "event_source": "DDEXMarket"}
+2019-04-17 15:02:21,199 - wags.market.ddex_market - INFO - Created OrderType.MARKET sell order 0xe7a3b97dc5d44dab400158221eaa91f81a096ef5bea5b3647bf153b9e151681d for 0.30 WETH-DAI.
+2019-04-17 15:02:30,894 - wags.market.ddex_market - INFO - The market sell order sell-WETH-DAI-1555527740113659 has completed according to order status API.
+2019-04-17 15:02:30,896 - lp.strategy.arbitrage.arbitrage - INFO - Market order completed on DDEXMarket: sell-WETH-DAI-1555527740113659 [clock=2019-04-17 19:02:30+00:00]
+2019-04-17 15:02:30,896 - wags.event_reporter - EVENT_LOG - {"timestamp": 1555527750.0, "order_id": "sell-WETH-DAI-1555527740113659", "base_asset": "WETH", "quote_asset": "DAI", "fee_asset": "DAI", "base_asset_amount": 0.0, "quote_asset_amount": 0.0, "fee_amount": 0.2563508563535278, "event_name": "SellOrderCompletedEvent", "event_source": "DDEXMarket"}
+2019-04-17 15:02:35,498 - wags.wallet.web3_wallet_backend - INFO - Received 0.30999999 WETH at transaction 0x1dbf1dce8f644a2c559d9a368fe8379875e25f60b5c7e3ed637fb4ab86ce406b.
+2019-04-17 15:02:45,537 - wags.market.ddex_market - INFO - Filled 0.3 out of 0.30 of the market sell order sell-WETH-DAI-1555527740113659.
+2019-04-17 15:02:45,538 - wags.event_reporter - EVENT_LOG - {"timestamp": 1555527765.0, "order_id": "sell-WETH-DAI-1555527740113659", "symbol": "WETH-DAI", "trade_type": "TradeType.SELL", "order_type": "OrderType.MARKET", "price": 169.37327714548823, "amount": 0.3, "event_name": "OrderFilledEvent", "event_source": "DDEXMarket"}
+2019-04-17 15:02:50,056 - wags.event_reporter - EVENT_LOG - {"timestamp": 1555527770.0, "order_id": "buy-WETH-DAI-1555527740113498", "symbol": "WETH-DAI", "trade_type": "TradeType.BUY", "order_type": "OrderType.MARKET", "price": "170.35853", "amount": "0.30999999", "event_name": "OrderFilledEvent", "event_source": "RadarRelayMarket"}
+2019-04-17 15:02:50,056 - wags.market.radar_relay_market - INFO - The market buy order buy-WETH-DAI-1555527740113498 has completed according to transaction hash 0x1dbf1dce8f644a2c559d9a368fe8379875e25f60b5c7e3ed637fb4ab86ce406b.
+2019-04-17 15:02:50,056 - lp.strategy.arbitrage.arbitrage - INFO - Market order completed on RadarRelayMarket: buy-WETH-DAI-1555527740113498 [clock=2019-04-17 19:02:50+00:00]
+2019-04-17 15:02:50,057 - wags.event_reporter - EVENT_LOG - {"timestamp": 1555527770.0, "order_id": "buy-WETH-DAI-1555527740113498", "base_asset": "WETH", "quote_asset": "DAI", "fee_asset": "DAI", "base_asset_amount": 0.30999999, "quote_asset_amount": 0.0, "fee_amount": 0.0, "event_name": "BuyOrderCompletedEvent", "event_source": "RadarRelayMarket"}
+2019-04-17 15:23:09,494 - wings.market.ddex_market - ERROR - Unexpected error while fetching account updates.
+Traceback (most recent call last):
+  File "wings/market/ddex_market.pyx", line 297, in wings.market.ddex_market.DDEXMarket._status_polling_loop
+    await asyncio.gather(self._update_trading_rules(), self._update_order_status())
+  File "wings/market/ddex_market.pyx", line 311, in _update_trading_rules
+    markets = await self.list_market()
+  File "wings/market/ddex_market.pyx", line 509, in list_market
+    response_data = await self._api_request('get', url=url)
+  File "wings/market/ddex_market.pyx", line 433, in _api_request
+    async with client.request(http_method, url=url, timeout=self.API_CALL_TIMEOUT, data=data,
+  File "/anaconda3/envs/hummingbot/lib/python3.6/site-packages/aiohttp/client.py", line 1005, in __aenter__
+    self._resp = await self._coro
+  File "/anaconda3/envs/hummingbot/lib/python3.6/site-packages/aiohttp/client.py", line 497, in _request
+    await resp.start(conn)
+  File "/anaconda3/envs/hummingbot/lib/python3.6/site-packages/aiohttp/client_reqrep.py", line 844, in start
+    message, payload = await self._protocol.read()  # type: ignore  # noqa
+  File "/anaconda3/envs/hummingbot/lib/python3.6/site-packages/aiohttp/streams.py", line 588, in read
+    await self._waiter
+aiohttp.client_exceptions.ClientOSError: [Errno 54] Connection reset by peer
+2019-04-17 15:23:10,286 - wings.market.ddex_market - ERROR - Error fetching status update for the order sell-WETH-DAI-1555527711011513: [Errno 54] Connection reset by peer.
+2019-04-17 15:23:10,287 - wings.market.ddex_market - ERROR - Error fetching status update for the order sell-WETH-DAI-1555527740113659: [Errno 54] Connection reset by peer.
+2019-04-17 15:23:41,754 - wings.watcher.contract_event_logs - ERROR - Error fetching logs from block with filters: '{'topics': ['0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef'], 'address': '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2', 'blockHash': '0xd09c6b466880bb3969554c9e92de758132a442422cc5cab5dcba2df3acc5d7b5'}'.
+2019-04-17 15:23:41,886 - wings.watcher.contract_event_logs - ERROR - Error fetching logs from block with filters: '{'topics': ['0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef'], 'address': '0x89d24A6b4CcB1B6fAA2625fE562bDD9a23260359', 'blockHash': '0xd09c6b466880bb3969554c9e92de758132a442422cc5cab5dcba2df3acc5d7b5'}'.
+2019-04-17 15:23:42,320 - wings.watcher.contract_event_logs - ERROR - Error fetching logs from block with filters: '{'topics': ['0xe1fffcc4923d04b559f4d29a8bfc6cda04eb5b0d3c460751c2402c5c5cc9109c'], 'address': '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2', 'blockHash': '0xd09c6b466880bb3969554c9e92de758132a442422cc5cab5dcba2df3acc5d7b5'}'.
+2019-04-17 15:24:38,576 - wings.watcher.contract_event_logs - ERROR - Error fetching logs from block with filters: '{'topics': ['0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925'], 'address': '0x89d24A6b4CcB1B6fAA2625fE562bDD9a23260359', 'blockHash': '0xd09c6b466880bb3969554c9e92de758132a442422cc5cab5dcba2df3acc5d7b5'}'.
+2019-04-17 15:24:38,821 - wings.watcher.contract_event_logs - ERROR - Error fetching logs from block with filters: '{'topics': ['0x7fcf532c15f0a6db0bd6d0e038bea71d30d808c7d98cb3bf7268a95bf5081b65'], 'address': '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2', 'blockHash': '0xd09c6b466880bb3969554c9e92de758132a442422cc5cab5dcba2df3acc5d7b5'}'.
+2019-04-17 15:24:38,821 - wings.watcher.contract_event_logs - ERROR - Error fetching logs from block with filters: '{'topics': ['0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925'], 'address': '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2', 'blockHash': '0xd09c6b466880bb3969554c9e92de758132a442422cc5cab5dcba2df3acc5d7b5'}'.
+2019-04-17 15:30:27,842 - wings.market.ddex_market - ERROR - Error fetching status update for the order sell-WETH-DAI-1555527711011513: .
+2019-04-17 15:30:27,849 - wings.market.ddex_market - ERROR - Error fetching status update for the order sell-WETH-DAI-1555527740113659: .
+2019-04-17 15:30:30,203 - wings.market.ddex_market - ERROR - Unexpected error while fetching account updates.
+Traceback (most recent call last):
+  File "wings/market/ddex_market.pyx", line 297, in wings.market.ddex_market.DDEXMarket._status_polling_loop
+    await asyncio.gather(self._update_trading_rules(), self._update_order_status())
+  File "wings/market/ddex_market.pyx", line 311, in _update_trading_rules
+    markets = await self.list_market()
+  File "wings/market/ddex_market.pyx", line 509, in list_market
+    response_data = await self._api_request('get', url=url)
+  File "wings/market/ddex_market.pyx", line 433, in _api_request
+    async with client.request(http_method, url=url, timeout=self.API_CALL_TIMEOUT, data=data,
+  File "/anaconda3/envs/hummingbot/lib/python3.6/site-packages/aiohttp/client.py", line 1005, in __aenter__
+    self._resp = await self._coro
+  File "/anaconda3/envs/hummingbot/lib/python3.6/site-packages/aiohttp/client.py", line 497, in _request
+    await resp.start(conn)
+  File "/anaconda3/envs/hummingbot/lib/python3.6/site-packages/aiohttp/client_reqrep.py", line 844, in start
+    message, payload = await self._protocol.read()  # type: ignore  # noqa
+  File "/anaconda3/envs/hummingbot/lib/python3.6/site-packages/aiohttp/streams.py", line 588, in read
+    await self._waiter
+aiohttp.client_exceptions.ClientOSError: [Errno 54] Connection reset by peer
+2019-04-17 15:30:53,588 - wings.data_source.radar_relay_api_order_book_data_source - WARNING - WebSocket ping timed out. Going to reconnect...
+2019-04-17 15:37:08,088 - wings.watcher.contract_event_logs - ERROR - Error fetching logs from block with filters: '{'topics': ['0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef'], 'address': '0x89d24A6b4CcB1B6fAA2625fE562bDD9a23260359', 'blockHash': '0xa371f41f7ec13e7a2e638edd261380fd53eaed7cc9ba0a135fbdb11080e4ba8f'}'.
+2019-04-17 15:37:09,453 - wings.watcher.contract_event_logs - ERROR - Error fetching logs from block with filters: '{'topics': ['0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef'], 'address': '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2', 'blockHash': '0xa371f41f7ec13e7a2e638edd261380fd53eaed7cc9ba0a135fbdb11080e4ba8f'}'.
+2019-04-17 15:37:09,453 - wings.watcher.contract_event_logs - ERROR - Error fetching logs from block with filters: '{'topics': ['0xe1fffcc4923d04b559f4d29a8bfc6cda04eb5b0d3c460751c2402c5c5cc9109c'], 'address': '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2', 'blockHash': '0xa371f41f7ec13e7a2e638edd261380fd53eaed7cc9ba0a135fbdb11080e4ba8f'}'.
+2019-04-17 15:38:04,198 - wings.watcher.contract_event_logs - ERROR - Error fetching logs from block with filters: '{'topics': ['0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925'], 'address': '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2', 'blockHash': '0xa371f41f7ec13e7a2e638edd261380fd53eaed7cc9ba0a135fbdb11080e4ba8f'}'.
+2019-04-17 15:38:04,403 - wings.watcher.contract_event_logs - ERROR - Error fetching logs from block with filters: '{'topics': ['0x7fcf532c15f0a6db0bd6d0e038bea71d30d808c7d98cb3bf7268a95bf5081b65'], 'address': '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2', 'blockHash': '0xa371f41f7ec13e7a2e638edd261380fd53eaed7cc9ba0a135fbdb11080e4ba8f'}'.
+2019-04-17 15:38:04,527 - wings.watcher.contract_event_logs - ERROR - Error fetching logs from block with filters: '{'topics': ['0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925'], 'address': '0x89d24A6b4CcB1B6fAA2625fE562bDD9a23260359', 'blockHash': '0xa371f41f7ec13e7a2e638edd261380fd53eaed7cc9ba0a135fbdb11080e4ba8f'}'.
+2019-04-17 15:47:55,262 - wings.watcher.contract_event_logs - ERROR - Error fetching logs from block with filters: '{'topics': ['0xe1fffcc4923d04b559f4d29a8bfc6cda04eb5b0d3c460751c2402c5c5cc9109c'], 'address': '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2', 'blockHash': '0xcc80e3b1c5a2fe7a8d4659030f0dae1d3965f51e717273b2584dc20bf8d2f7d3'}'.
+2019-04-17 15:47:55,564 - wings.watcher.contract_event_logs - ERROR - Error fetching logs from block with filters: '{'topics': ['0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef'], 'address': '0x89d24A6b4CcB1B6fAA2625fE562bDD9a23260359', 'blockHash': '0xcc80e3b1c5a2fe7a8d4659030f0dae1d3965f51e717273b2584dc20bf8d2f7d3'}'.
+2019-04-17 15:47:56,112 - wings.watcher.contract_event_logs - ERROR - Error fetching logs from block with filters: '{'topics': ['0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef'], 'address': '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2', 'blockHash': '0xcc80e3b1c5a2fe7a8d4659030f0dae1d3965f51e717273b2584dc20bf8d2f7d3'}'.
+2019-04-17 15:56:34,246 - wings.market.ddex_market - ERROR - Unexpected error while fetching account updates.
+Traceback (most recent call last):
+  File "wings/market/ddex_market.pyx", line 297, in wings.market.ddex_market.DDEXMarket._status_polling_loop
+    await asyncio.gather(self._update_trading_rules(), self._update_order_status())
+  File "wings/market/ddex_market.pyx", line 311, in _update_trading_rules
+    markets = await self.list_market()
+  File "wings/market/ddex_market.pyx", line 509, in list_market
+    response_data = await self._api_request('get', url=url)
+  File "wings/market/ddex_market.pyx", line 433, in _api_request
+    async with client.request(http_method, url=url, timeout=self.API_CALL_TIMEOUT, data=data,
+  File "/anaconda3/envs/hummingbot/lib/python3.6/site-packages/aiohttp/client.py", line 1005, in __aenter__
+    self._resp = await self._coro
+  File "/anaconda3/envs/hummingbot/lib/python3.6/site-packages/aiohttp/client.py", line 497, in _request
+    await resp.start(conn)
+  File "/anaconda3/envs/hummingbot/lib/python3.6/site-packages/aiohttp/client_reqrep.py", line 844, in start
+    message, payload = await self._protocol.read()  # type: ignore  # noqa
+  File "/anaconda3/envs/hummingbot/lib/python3.6/site-packages/aiohttp/streams.py", line 588, in read
+    await self._waiter
+aiohttp.client_exceptions.ClientOSError: [Errno 54] Connection reset by peer
+2019-04-17 15:56:35,583 - wings.market.ddex_market - ERROR - Error fetching status update for the order sell-WETH-DAI-1555527674014984: [Errno 54] Connection reset by peer.
+2019-04-17 15:56:35,583 - wings.market.ddex_market - ERROR - Error fetching status update for the order sell-WETH-DAI-1555527740113659: [Errno 54] Connection reset by peer.
+2019-04-17 15:57:57,196 - wings.market.ddex_market - ERROR - Unexpected error while fetching account updates.
+Traceback (most recent call last):
+  File "wings/market/ddex_market.pyx", line 297, in wings.market.ddex_market.DDEXMarket._status_polling_loop
+    await asyncio.gather(self._update_trading_rules(), self._update_order_status())
+  File "wings/market/ddex_market.pyx", line 311, in _update_trading_rules
+    markets = await self.list_market()
+  File "wings/market/ddex_market.pyx", line 509, in list_market
+    response_data = await self._api_request('get', url=url)
+  File "wings/market/ddex_market.pyx", line 433, in _api_request
+    async with client.request(http_method, url=url, timeout=self.API_CALL_TIMEOUT, data=data,
+  File "/anaconda3/envs/hummingbot/lib/python3.6/site-packages/aiohttp/client.py", line 1005, in __aenter__
+    self._resp = await self._coro
+  File "/anaconda3/envs/hummingbot/lib/python3.6/site-packages/aiohttp/client.py", line 497, in _request
+    await resp.start(conn)
+  File "/anaconda3/envs/hummingbot/lib/python3.6/site-packages/aiohttp/client_reqrep.py", line 844, in start
+    message, payload = await self._protocol.read()  # type: ignore  # noqa
+  File "/anaconda3/envs/hummingbot/lib/python3.6/site-packages/aiohttp/streams.py", line 588, in read
+    await self._waiter
+aiohttp.client_exceptions.ClientOSError: [Errno 54] Connection reset by peer
+2019-04-17 15:57:57,242 - wings.market.ddex_market - ERROR - Error fetching status update for the order sell-WETH-DAI-1555527674014984: [Errno 54] Connection reset by peer.
+2019-04-17 15:57:57,242 - wings.market.ddex_market - ERROR - Error fetching status update for the order sell-WETH-DAI-1555527711011513: [Errno 54] Connection reset by peer.
+2019-04-17 15:57:57,242 - wings.market.ddex_market - ERROR - Error fetching status update for the order sell-WETH-DAI-1555527740113659: [Errno 54] Connection reset by peer.
+2019-04-17 15:58:06,869 - wings.data_source.radar_relay_api_order_book_data_source - WARNING - WebSocket ping timed out. Going to reconnect...
+2019-04-17 16:31:11,534 - wings.market.ddex_market - ERROR - Error fetching status update for the order sell-WETH-DAI-1555527711011513: [Errno 54] Connection reset by peer.
+2019-04-17 16:31:12,157 - wings.watcher.contract_event_logs - ERROR - Error fetching logs from block with filters: '{'topics': ['0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925'], 'address': '0x89d24A6b4CcB1B6fAA2625fE562bDD9a23260359', 'blockHash': '0xcc80e3b1c5a2fe7a8d4659030f0dae1d3965f51e717273b2584dc20bf8d2f7d3'}'.
+2019-04-17 16:31:12,847 - wings.watcher.contract_event_logs - ERROR - Error fetching logs from block with filters: '{'topics': ['0x7fcf532c15f0a6db0bd6d0e038bea71d30d808c7d98cb3bf7268a95bf5081b65'], 'address': '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2', 'blockHash': '0xcc80e3b1c5a2fe7a8d4659030f0dae1d3965f51e717273b2584dc20bf8d2f7d3'}'.
+2019-04-17 16:31:12,892 - wings.watcher.contract_event_logs - ERROR - Error fetching logs from block with filters: '{'topics': ['0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925'], 'address': '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2', 'blockHash': '0xcc80e3b1c5a2fe7a8d4659030f0dae1d3965f51e717273b2584dc20bf8d2f7d3'}'.
+2019-04-17 17:10:12,276 - wings.market.ddex_market - ERROR - Unexpected error while fetching account updates.
+Traceback (most recent call last):
+  File "wings/market/ddex_market.pyx", line 297, in wings.market.ddex_market.DDEXMarket._status_polling_loop
+    await asyncio.gather(self._update_trading_rules(), self._update_order_status())
+  File "wings/market/ddex_market.pyx", line 311, in _update_trading_rules
+    markets = await self.list_market()
+  File "wings/market/ddex_market.pyx", line 509, in list_market
+    response_data = await self._api_request('get', url=url)
+  File "wings/market/ddex_market.pyx", line 433, in _api_request
+    async with client.request(http_method, url=url, timeout=self.API_CALL_TIMEOUT, data=data,
+  File "/anaconda3/envs/hummingbot/lib/python3.6/site-packages/aiohttp/client.py", line 1005, in __aenter__
+    self._resp = await self._coro
+  File "/anaconda3/envs/hummingbot/lib/python3.6/site-packages/aiohttp/client.py", line 497, in _request
+    await resp.start(conn)
+  File "/anaconda3/envs/hummingbot/lib/python3.6/site-packages/aiohttp/client_reqrep.py", line 844, in start
+    message, payload = await self._protocol.read()  # type: ignore  # noqa
+  File "/anaconda3/envs/hummingbot/lib/python3.6/site-packages/aiohttp/streams.py", line 588, in read
+    await self._waiter
+aiohttp.client_exceptions.ClientOSError: [Errno 54] Connection reset by peer
